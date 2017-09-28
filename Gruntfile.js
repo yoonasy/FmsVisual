@@ -19,9 +19,9 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: 'src/js',
+                    cwd: 'src/',
                     src: ['*.js', '!*.min.js'],
-                    dest: 'src/js',
+                    dest: 'dest/',
                     ext: '.min.js'
 
                 }]
@@ -47,7 +47,7 @@ module.exports = function(grunt) {
         
         // JavaScript Syntax Check
         jshint: {
-            files : ['src/*.js'],
+            files : ['src/*.js', '!src/*.min.js'],
 
             options: {
 
@@ -83,7 +83,8 @@ module.exports = function(grunt) {
                 "node"          : true, // 使用在nodeJS运行环境，可以定义node全局变量
                 "globals"       : {     // 设置全局变量，true可以读取和写入，false jshint将视为只读
                     $           : false,
-                    jQuery      : false
+                    jQuery      : false,
+                    window      : false
                 },
             }
         },

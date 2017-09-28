@@ -1,6 +1,5 @@
 $(function() {
-
-    !function(window) {
+    (function() {
         /* targetDom：[jQselec]必传   在目标区域滑动的元素，接受Dom对象，以及jQ获取方式的css选择器；
          * className：[jQselec]必传   移动的元素，接受Dom对象，以及jQ获取方式的css选择器；
          * num      ：[Object ]选传   X 缩放百分比的比列默认3% ==> 0.03   Y 缩放百分比的比列默认1% ==> 0.01
@@ -44,8 +43,8 @@ $(function() {
 
                 $that.targetDom.mousemove(function(e) {
                     $that.ev = e;
-                })
-            }
+                });
+            };
             this.visual = function(ev) {
                 var tx = $that.clientX - ev.clientX;
                 var ty = $that.clientY - ev.clientY;
@@ -64,7 +63,7 @@ $(function() {
                     "-o-transition": "all 300ms ease",
                     "transition": "all 300ms ease",
                 });
-            }
+            };
 
             this.get();
             setInterval(function() {
@@ -78,15 +77,14 @@ $(function() {
             init: function() {
                 
             }
-        }
+        };
 
         // 暴露给全局
         window.Fms = Fms;
 
-    }(window);
+    })();
 
-    new Fms('.wrap800', '.pic404', {x: 0.08, y: 0.03});
-    new Fms('.wrap800', '.crab', {x: 0.04, y: 0.01});
-
-})
+    // new Fms('.wrap800', '.pic404', {x: 0.08, y: 0.03});
+    // new Fms('.wrap800', '.crab', {x: 0.04, y: 0.01});
+});
 

@@ -1,0 +1,14 @@
+{
+  "name": "fmsvisual",
+  "version": "1.0.0",
+  "description": "",
+  "main": "FmsVisual.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "grunt": "^1.0.1"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "name": "fmsvisual",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "add visual",
   "main": "FmsVisual.js",
   "scripts": {
     "test": "make test"
